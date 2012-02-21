@@ -206,7 +206,7 @@ class KeystoneClientTests(object):
         user = client.users.get(user=user.id)
         self.assertEquals(user.name, test_username)
 
-        user = client.users.update_email(user=user, email='user2@test.com')
+        user = client.users.update(user=user, email='user2@test.com')
         self.assertEquals(user.email, 'user2@test.com')
 
         # NOTE(termie): update_enabled doesn't return anything, probably a bug
